@@ -1,0 +1,39 @@
+@mixin text($size:16px, $family:$MyriadPro, $color:$black,  $lineheight:null, $weight:null){
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    line-height: $lineheight;
+    font-weight: $weight;
+}
+
+
+@mixin titleH2($color:$blue){
+	text-transform: uppercase;
+  position: relative;
+	text-align: center;
+	padding:15px;
+	color:$color;
+	margin:45px 0;
+	display:inline-block;
+	width:100%;
+	&::after {
+		height:2px;
+		width:70px;
+ 		 content: " ";
+ 		 background-color: $color;
+ 		 position: absolute;
+ 		  bottom:0;
+ 		  margin-left: -10px;
+
+		}
+	&::before{
+		height:2px;
+		width:70px;
+ 		 content: " ";
+ 		 background-color: $color;
+ 		 position: absolute;
+ 		 top:0;
+ 		  margin-left: -60px;
+	}
+	
+}

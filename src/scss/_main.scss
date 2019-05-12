@@ -1,0 +1,386 @@
+#home{
+	background-color: $dBlue;
+	height:700px;
+	width:100%;
+	overflow:hidden;
+	position: relative;
+
+	.mainBaner{
+		width:100%;
+		margin-top: 25px;
+	}
+	.mainBanerText{
+		position: absolute;
+		top:200px;
+	}
+	h1{
+		@include text(55px);
+		color:white;
+		width:50%;
+	}
+	p{
+		@include text();
+		color:white;
+		width:50%;
+		
+	}
+	.mouse{
+		position: absolute;
+		bottom:50px;
+		//width:50px;
+		left:50%;
+	}
+
+}
+#services{
+h2{
+	@include text(25px, $MontserratSB)
+	@include titleH2();
+}
+p{
+	@include text();
+	color:$dBlue;
+	
+	text-align: center;
+	margin:30px 0;
+}
+
+
+.servicesBox{
+	margin: 40px 0;
+	display:flex;
+		flex-direction:row;
+		justify-content: space-between;
+	.servicesElement{
+		
+		width:240px;
+		padding: 0 40px;
+		text-align: center;
+		img{
+			height:80px;
+			margin:15px 0;
+
+		}
+		.servicesText{
+			@include text();
+			color:$blue;
+			margin:15px 0;
+		}
+
+	}
+}
+}
+
+#aboutUs{
+
+	background-color: $dBlue;
+	height:700px;
+	width:100%;
+	overflow:hidden;
+	position: relative;
+
+	.aboutUsText{
+		width:1000px;
+		left:0;
+		right:0;
+		margin:auto;
+		position: absolute;
+		top:100px;
+		
+	}
+	h2{
+		@include titleH2($white);
+		color:white;
+	//	width:50%;
+		
+	}
+	p{
+		@include text();
+		color:white;
+		width:1000px;
+		text-align: center;
+		margin-top: 25px;
+	}
+	img{
+		width:100%;
+	}
+
+
+
+}
+
+#contactUs{
+padding: 30px;
+margin-bottom: 80px;
+h2{
+	@include titleH2();
+}
+p{
+	@include text();
+	text-align: center;
+	color:$dBlue;
+	margin-bottom: 35px;
+}
+.map{
+	float:left;
+	width:50%;
+	display: inline-block;
+	iframe{
+		width:100%;
+		height:300px;
+		
+	}
+}
+form{
+	padding: 0 15px;
+	width:50%;
+		height:300px;
+		display: inline-block;
+		input{
+			padding:15px;
+			@include text(14px);
+			font-family: $MontserratR;
+			color:$gray;
+			width:100%;
+			margin:5px 0;
+			border: 1px solid $blue;
+			border-radius: 5px;
+			outline:none;
+			&.error{
+				border: 1px solid red;
+			}
+		}
+		textarea{
+			padding:15px;
+			height:100px;
+			@include text(14px);
+			font-family: $MontserratR;
+			color:$gray;
+			width:100%;
+			margin:5px 0;
+			border: 1px solid $blue;
+			border-radius: 5px;
+			outline:none;
+			&.error{
+				border: 1px solid red;
+			}
+		}
+		button
+		{
+			transition:0.5s;
+			margin-top: 10px;
+			float:right;
+			@include text(14px);
+			font-family: $MontserratSB;
+			font-weight: 700;
+			color:white;
+			background-color: $blue;
+			text-transform: uppercase;
+			padding:10px 40px;
+			border:none;
+			border-radius: 10px;
+			outline:none;
+			border:1px solid $white;
+			&:hover{
+				color:$blue;
+				background-color: $white;
+				border:1px solid $blue;
+			}
+		}
+		&.disabled{
+			display:none;
+		}
+
+}
+.mesageSend{
+	padding: 0 15px;
+	width:50%;
+	height:400px;
+	display:inline-block;
+	text-align: center;
+	img{
+		width:200px;
+		margin:auto;
+		margin-top: 10px;
+	}
+	h3{
+			@include text(18px);
+			font-family: $MontserratSB;
+			color:$dBlue;
+	}
+	p{
+			@include text(14px);
+			font-family: $MontserratR;
+			color:$dBlue;
+	}
+		&.disabled{
+			display:none;
+		}
+
+}
+
+}
+
+ @media only screen and (max-width : 1200px){
+	body{
+
+		#home{
+			height: 420px;
+			.mainBanerText{
+				top:80px;
+			}
+		}
+		#aboutUs{
+			height: 420px;
+			.aboutUsText{
+				h2{
+					margin-bottom:20px;
+				}
+				position: absolute;
+				top:0;
+				width:700px;
+				p{
+					width:100%;
+				}
+			}
+		
+		}
+
+	}
+	.content{
+		width:700px;
+	}
+ }
+
+
+ @media only screen and (max-width : 768px){
+ 	body{
+ #home{
+ 	height:250px;
+		.mainBaner{
+			margin-top: 0;
+
+		}
+			.mainBanerText{
+				top:10px;
+				h1,p{
+					text-align: center;
+					width:95%;
+				}
+
+
+			}
+		.mouse{
+			display:none;
+		}	
+	}
+	.content{
+		width:90%;
+	}
+	#services{
+		h2{
+			font-size: 18px;
+			margin-top:40px;
+			margin-bottom: 15px;
+		}
+		.servicesBox{
+			display:block;
+			text-align: center;
+			.servicesElement{
+				display:inline-block;
+				//width:160px;
+			}
+			//flex-direction: column;
+		}
+
+
+	}
+	#aboutUs{
+			height: 280px;
+			.aboutUsText{
+				h2{
+					margin-bottom:0px;
+					margin-top: 15px;
+					font-size:18px;
+
+
+				}
+				position: absolute;
+				top:0;
+				width:450px;
+				p{
+					width:100%;
+					font-size: 12px;
+					margin:10px;
+				}
+			}
+		
+		}
+	#contactUs{
+			h2{
+					margin-bottom:0px;
+					margin-top: 15px;
+					font-size:18px;
+				}
+			.map{
+				width:100%;
+				}
+			form{
+				width:100%;
+			}
+			.mesageSend{
+				margin-top: 40px;
+				width:100%;	
+				height:auto;
+			}	
+	}
+
+}
+}
+ @media only screen and (max-width : 500px){
+	body{
+		 #home{
+ 	height:180px;
+			.mainBanerText{
+				top:30px;
+				h1,p{
+					text-align: center;
+					width:95%;
+				}
+				h1{
+					font-size: 18px;
+				}
+				p{
+					font-size: 12px;
+				}
+
+			}
+	}
+		#aboutUs{
+			height:375px;
+
+			.aboutUsText{
+				h2{
+					margin-bottom:0px;
+					margin-top: 15px;
+					font-size:14px;
+					
+
+				}
+				position: absolute;
+				top:0;
+				width:300px;
+				p{
+					width:100%;
+					font-size: 12px;
+					margin:10px;
+				}
+			}
+		
+
+		}
+
+
+
+	}
+ }
