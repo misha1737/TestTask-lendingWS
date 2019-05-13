@@ -55,8 +55,13 @@ span{
 			text-align: center;
 			list-style:none;
 			padding:20px;
-			@include text(20px);
+			
 			text-transform: uppercase;
+			a{
+				@include text(20px);
+				text-decoration: none;
+				color:$blue;
+			}
 		}
 	}
 	&.visible{

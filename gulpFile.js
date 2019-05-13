@@ -10,7 +10,7 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 var cssnano = require('gulp-cssnano');
-var url = 'lendingWS';
+
 function styles(){
    return gulp.src('./src/scss/**/*.scss')
     
@@ -26,21 +26,21 @@ function styles(){
 }
 
 function scripts(){
-	    return gulp.src('./src/js/*.js')
+      return gulp.src('./src/js/*.js')
     .pipe(concat('all.js'))
     .pipe(uglify({
-    	toplevel: true
-		}))
+      toplevel: true
+    }))
     .pipe(gulp.dest('./build/js/'))
     .pipe(browserSync.stream())
 }
 function watch(){
 browserSync.init({
-	proxy: url
-	});
-	gulp.watch('./src/scss/**/*.scss', styles);
-	gulp.watch('./src/js/**/*.js', scripts);
-	gulp.watch('./**/*.html').on('change',browserSync.reload);
+  proxy: "TestTask-lendingWS"
+  });
+  gulp.watch('./src/scss/**/*.scss', styles);
+  gulp.watch('./src/js/**/*.js', scripts);
+  gulp.watch('./**/*.html').on('change',browserSync.reload);
   gulp.watch('./**/*.php').on('change',browserSync.reload);
 }
 

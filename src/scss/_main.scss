@@ -1,3 +1,6 @@
+body{
+	margin:0;
+}
 #home{
 	background-color: $dBlue;
 	height:700px;
@@ -90,6 +93,7 @@ p{
 	}
 	h2{
 		@include titleH2($white);
+		font-family: $MontserratSB;
 		color:white;
 	//	width:50%;
 		
@@ -114,6 +118,7 @@ padding: 30px;
 margin-bottom: 80px;
 h2{
 	@include titleH2();
+	font-family: $MontserratSB;
 }
 p{
 	@include text();
@@ -123,7 +128,7 @@ p{
 }
 .map{
 	float:left;
-	width:50%;
+	width:48%;
 	display: inline-block;
 	iframe{
 		width:100%;
@@ -133,7 +138,7 @@ p{
 }
 form{
 	padding: 0 15px;
-	width:50%;
+	width:48%;
 		height:300px;
 		display: inline-block;
 		input{
@@ -250,6 +255,18 @@ form{
 	.content{
 		width:700px;
 	}
+	#contactUs{
+		.map{
+
+		width:100%;
+	
+		}
+		form{
+	
+		width:95%;
+		padding:0;
+		}
+	}
  }
 
 
@@ -266,6 +283,9 @@ form{
 				h1,p{
 					text-align: center;
 					width:95%;
+				}
+				h1{
+					font-size: 30px;
 				}
 
 
@@ -327,6 +347,7 @@ form{
 				}
 			form{
 				width:100%;
+				position: relative;
 			}
 			.mesageSend{
 				margin-top: 40px;
@@ -339,6 +360,9 @@ form{
 }
  @media only screen and (max-width : 500px){
 	body{
+		.content{
+		width:85%;
+	}
 		 #home{
  	height:180px;
 			.mainBanerText{
@@ -357,6 +381,7 @@ form{
 			}
 	}
 		#aboutUs{
+
 			height:375px;
 
 			.aboutUsText{

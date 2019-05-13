@@ -10,7 +10,9 @@ footer{
 				padding:0px 20px;
 			list-style: none;
 			a{
+				@include text(16px);
 			color:$white;
+			text-decoration: none;
 			}
 		}
 	}

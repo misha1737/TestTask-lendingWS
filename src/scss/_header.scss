@@ -1,5 +1,6 @@
 header{
 	transition:0.5s;
+
 	position: fixed;
 	top:0;
 	z-index: 10;
@@ -32,11 +33,13 @@ header{
 				margin-left: 25px;
 				cursor:pointer;
 				a{
+
 					@include text(16px, $MontserratR);
 					color:$gray;
 					padding:5px 0;
 					transition: 0.5s;
 					border-bottom: 2px solid $white;
+					text-decoration: none;
 					&:hover{
 						text-decoration: none;
 						color:$blue;
@@ -57,7 +60,7 @@ header{
 	}
 	nav{
 		ul{
-			height:45px;
+			height:10px;
 		}
 	}
 
